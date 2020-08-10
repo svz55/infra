@@ -1,7 +1,7 @@
 #!/bin/bash
 GROUP=2019-02
 BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
-HOMEWORK_RUN=./svz55/infra/blob/master/.travis.yml/$BRANCH/run.sh
+HOMEWORK_RUN=./svz55/infra/$BRANCH/run.sh
 REPO=https://github.com/svz55/infra.git
 DOCKER_IMAGE=express42/otus-homeworks
 
