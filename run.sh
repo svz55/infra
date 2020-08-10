@@ -12,7 +12,7 @@ if [ "$BRANCH" == "" ]; then
 	exit 0
 fi
 
-echo HOMEWORK:$BRANCH
+echo svz55:$BRANCH
 
 echo "Clone repository with tests"
 git clone -b $GROUP --single-branch $REPO
