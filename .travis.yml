@@ -1,15 +1,8 @@
 dist: trusty
 sudo: required
 language: bash
-before_install:
-#- curl https://raw.githubusercontent.com/express42/otus-homeworks/2019-02/run.sh | bash
-./run.sh | bash
-
-#before_script:
-#- curl https://raw.githubusercontent.com/otus-devops-2019-02/weisdd_infra/ansible-3/travisci/run_tests_in_docker.sh | bash
-#notifications:
-#  slack:
-#    rooms:
-#      secure: l5vkmie+oV9l3P/6WP3pLlSniaBiO6BoomKlF8LIY82RwiKRD6T3ExT8/fw+z4HLjPIyAAasHnGqX3IsKWg4aPfJAbmGodnYwZ7qgnbeuCCyevZIcOF0w6ei61ASNoTB90YUxaH9FyAXk09krUOzrgzM6tBcXmI8GpcmY1+8UfyKF3ouZWo0CkBc8Rud9b0HhYFS7b5LSyD+UhbUpKv5gA92a+ICZGl8DNqj21zI/+OyJ7aP8MBdzPW1GWMBFB5fO+D9vmSYVNP04alcHtc7nG6oaYIgQhG6Hq9gDUsfho2DO7zxLbMuE4KxnQ5lQ1ZWnk6HjhUsfSDLk8crADnxhchaL3owm6iEWuaT+Ixl6y/gHRQVHygirONWW/b5dDfqJCqEnIRd5qxVLmrJ2UOmrtRGvJFmMbPBlDmuXCrnnsLf/eycVA8hj1FKOGz/35GwzUGt+9C5c4vdY8e2gGp+uNeU7w1leHJYFy2I63GVBPXGUlzpc95GbKHYgve1Pwx2tP6ZcaRh31NRiAIIFt0UFtyWLvuJJJQd5zcXs=
-#hkwrYXJ6HDqWdaWUSthX8fzT
-#  hkwrYXJ6HDqWdaWUSthX8fzTK
+before_install: "./run.sh | bash"
+notifications:
+  slack:
+    rooms:
+      secure: bQbZEERYVXuEDwRroBaXBK9Qwycd5xTh9lcT6YP+CWY5eys67zpqEdwB60oTQSF6HSdl7wTFM23GJ89h4++ffBq4uuLM/mu0cjKsO8rzVWk7JkS0tQSARZsySX1KkeXUTFlxlXPmIoxYUp2Rne5GHUdHCnjxboRS64xCT99ozpY3nK7hhLpHB2eqRYm+FKA07mUjWhwzYba5lrWlfpu6mMIcrXaVcAWwjMVAqpMP9kalrgHqg8fFIF0nJsbxNve88CXM0bjUlw+lZcBArOI89CEqbmS8vc2cTv/U2upSlHgwW2GXUXC16OP3yZvCukP4t68S9RvT0e9R1SDrdvUdZ0NUbUddq9v/3ThT+BTkqLMuO0eI7bBOdiN6NZFFX0cya4r4xKn3Kd7rfG/pxpN/5x0Z+GuIVhVtdUSv8tY/3oLmdq9lhfNaCCJ2fRR+NB0uke/jyTWcOjbbP7viu4J5IPiE1Y4H06alUmwqr2X4gOcyLbWiUkR2tUGlds78pO43wxC+8SOj0Nj5FBNkQiw883iPE5LttblAoF3x96n2EFImNynG6g7fAmeGMeuoYBTY3leQZ3kPfDC8tsL4U5eE1ztl7jWrhlLRa4L+BJ4ESiT4iKoF1A9rs0aMp5PVpYUv6Cv3KjueFXpiYEWesawk56Fg3TxFx+lOFmGZOFoQGu4=
