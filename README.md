@@ -1,6 +1,13 @@
 # svz55_infra [![Build Status](https://github.com/svz55/infra)](https://github.com/svz55/infra)
 svz55 Infra repository
 
+##   Travis 
+```
+travis whoami -t 727Sg38Qxk3vbIvssrEZ3g
+travis login --github-token  727Sg38Qxk3vbIvssrEZ3g
+travis encrypt "svz55:hkwrYXJ6HDqWdaWUSthX8fzT#travis_ci"  --add notifications.slack.rooms --org
+```
+
 ## HW 5 (VPN)
 
 ### Подключение к someinternalhost одной командой:
