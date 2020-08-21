@@ -1,11 +1,15 @@
-# svz55_infra [![Build Status](https://github.com/svz55/infra)](https://github.com/svz55/infra)
-svz55 Infra repository
+# svz55_infra [svz55 Infra repository](https://github.com/svz55/infra)
 
 ##   Travis 
 ```
 travis whoami -t 727Sg38Qxk3vbIvssrEZ3g
 travis login --github-token  727Sg38Qxk3vbIvssrEZ3g
 travis encrypt "svz55:hkwrYXJ6HDqWdaWUSthX8fzT#travis_ci"  --add notifications.slack.rooms --org
+```
+
+## Google cloud ssh-keygen name file appuser
+```
+ssh -i ~/.ssh/appuser appuser@35.208.19.130
 ```
 
 ## HW 5 (VPN)
@@ -74,8 +78,38 @@ someinternalhost_IP = 10.132.0.3
 
 ## HW 6 (GCP, cloud-testapp)
 
+Проверить установку и настройку gcloud можно, используя
+команду gcloud info или gcloud auth list
+
+### Создаем новый инстанс
+
+[Ссылка на gist с командой](https://gist.githubusercontent.com/Nklya/5bc429c6ca9adce1f7898e7228788fe5/raw/01f9e4a1bf00b4c8a37ca6046e3e4d4721a3316a/gcloud)
+   
+```
+    $ gcloud compute instances create reddit-app \
+    --boot-disk-size=10GB \
+    --image-family ubuntu-1604-lts \
+    --image-project=ubuntu-os-cloud \
+    --machine-type=g1-small \
+    --tags puma-server \
+    --restart-on-failure
+```
+
+#### инстанс с уже запущенным приложением
+#### startup скрипт необходимо как дополнительная  опция уcloud. 
+```
+gcloud compute instances create reddit-app 
+    --boot-disk-size=10GB --image-family ubuntu-1604-lts 
+    --image-project=ubuntu-os-cloud --machine-type=g1-small 
+    --tags puma-server 
+    --restart-on-failure 
+    --metadata-from-file startup-script=install_all.sh
+```
+
 ### Скрипты для настройки системы и деплоя приложения
-Здесь, в общем-то, ничего не обычного - просто список команд в .sh файлах (install_ruby.sh, install_mongodb.sh, deploy.sh)
+Здесь, в общем-то, ничего не обычного - просто список команд в .sh файлах 
+packer/scripts 
+(install_ruby.sh, install_mongodb.sh, deploy.sh)
 
 ### Дополнительное задание: startup-script
 Ключевые моменты:
